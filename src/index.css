@@ -1,0 +1,83 @@
+:root {
+  color-scheme: dark;
+  --bg: #081018;
+  --bg-strong: #050b12;
+  --text: #aeb8c7;
+  --text-strong: #f3f6fb;
+  --muted: #8d99ab;
+  --accent: #d6a85f;
+  --accent-strong: #f1c98f;
+  --line: rgba(214, 168, 95, 0.14);
+  --panel-bg: linear-gradient(180deg, rgba(15, 22, 32, 0.84), rgba(10, 16, 25, 0.94));
+  --shadow-soft: 0 22px 48px rgba(0, 0, 0, 0.28);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(214, 168, 95, 0.12), transparent 26rem),
+    radial-gradient(circle at top right, rgba(84, 126, 173, 0.14), transparent 28rem),
+    linear-gradient(145deg, #091119 0%, #0b1420 46%, #060c13 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 88px,
+      rgba(255, 255, 255, 0.025) 88px,
+      rgba(255, 255, 255, 0.025) 89px
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto 0 0 0;
+  height: 220px;
+  background: linear-gradient(180deg, transparent, rgba(4, 9, 16, 0.6));
+  pointer-events: none;
+  z-index: -1;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
