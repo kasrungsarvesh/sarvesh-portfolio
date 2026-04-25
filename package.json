@@ -6,7 +6,7 @@
   "homepage": "https://kasrungsarvesh.github.io/sarvesh-portfolio",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm exec -- vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
